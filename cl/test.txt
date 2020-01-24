@@ -1,0 +1,42 @@
+P1: PREGUNTA
+Quants adults viuen a casa teva?
+P2: PREGUNTA
+Quants menors vien a casa teva?
+R1: RESPOSTA
+0: zero ;
+1: un ;
+2: dos ;
+3: més de dos ;
+I1: ITEM
+P1 -> R1
+I2: ITEM
+P2 -> R1
+P3: PREGUNTA
+Com vas a la feina majoritàriament?
+R3: RESPOSTA
+1: caminant ;
+2: en cotxe ;
+3: en transport públic ;
+I3: ITEM
+P3 -> R3
+P4: PREGUNTA
+Utilitzes car sharing?
+R4: RESPOSTA
+1: Si ;
+2: No ;
+I4: ITEM
+P4 -> R4
+P5: PREGUNTA
+Quin mitja de transport utilitzes majoritàriament?
+R5: RESPOSTA
+1: Tren ;
+2: Bus ;
+3: Metro ;
+4: Altres ;
+I5: ITEM
+P5 -> R5
+A1: ALTERNATIVA
+I3 [(2,I4),(3,I5)]
+E: ENQUESTA
+I1 I2 I3
+END
